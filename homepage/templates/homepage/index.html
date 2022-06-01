@@ -1,0 +1,91 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+
+{% block title %} Sicredi {% endblock %}
+
+{% block content %}
+<main class="main">
+    <section class="search_container" role="search">
+        <form action="#" method="get">
+            <fieldset>
+                <label for="cnpj_search">Acessar conta com</label>
+                <i class="bi bi-caret-down-fill"></i>
+                <input type="search" name="cnpj_search" id="cnpj_search" placeholder="CNPJ" maxlength="200" />
+                <button type="submit" title="Buscar CNPJ">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </fieldset>
+        </form>
+    </section>
+    <article class="presentation" role="presentation">
+        <section>
+            <h1 class="presentation_title">
+                Nós temos<br>
+                as melhores<br>
+                oportunidades<br>
+                <span>para você</span>
+            </h1>
+            <p class="presentation_description">
+                Somos o parceiro ideal para te acompanhar<br>
+                e ajudar em todas as suas conquistas. De<br>
+                forma responsável e transparente, nós vamos,<br>
+                juntos, organizar a sua vida financeira.
+            </p>
+            <button type="button" class="button">Abra sua conta</button>
+        </section>
+
+    </article>
+
+    <img src="{% static "images/main_image.svg" %}" alt="Finanças">
+
+    <nav class="sidenav">
+        <h1 class="sidenav_title">Para Você</h1>
+        <ul>
+            <li>
+                <a href="#">Conta Corrente</a>
+            </li>
+            <li>
+                <a href="#">Cartões</a>
+            </li>
+            <li class="new_option">
+                <a href="#">Pix</a>
+            </li>
+            <li>
+                <a href="#">Consórcios</a>
+            </li>
+            <li>
+                <a href="#">Crédito</a>
+            </li>
+            <li>
+                <a href="#">Investimentos</a>
+            </li>
+            <li>
+                <a href="#">Pagamentos</a>
+            </li>
+            <li>
+                <a href="#">Previdência</a>
+            </li>
+            <li>
+                <a href="#">Máquina de Cartões</a>
+            </li>
+            <li>
+                <a href="#">Seguros</a>
+            </li>
+            <li>
+                <a href="#">Câmbio</a>
+            </li>
+            <li>
+                <a href="#">Certificado Digital</a>
+            </li>
+            <li>
+                <a href="#">Momentos</a>
+            </li>
+        </ul>
+
+        <footer>
+            <h2>Para sua Empresa</h2>
+            <h2>Para seu Agronegócio</h2>
+        </footer> 
+    </nav>
+</main>
+{% endblock %}

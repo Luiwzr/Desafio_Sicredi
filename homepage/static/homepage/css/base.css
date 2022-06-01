@@ -1,0 +1,58 @@
+:root {
+  --primary: #44a511;
+  --secondary: rgb(64, 195, 64);
+  --lightprimary: #65cc34;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Sora";
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button {
+  border-radius: 0.1rem;
+  padding: 1rem 2rem;
+
+  background-color: var(--primary);
+  color: white;
+
+  font-weight: 300;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #379305;
+}
+
+.button:active {
+  background-color: #266c00;
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 3vmin;
+  }
+}

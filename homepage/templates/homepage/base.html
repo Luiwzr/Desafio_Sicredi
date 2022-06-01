@@ -1,0 +1,117 @@
+{% load static %}
+
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/base.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/header.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/index.css' %}">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+  <header class="header">
+    <div></div>
+
+    <section class="search_container" role="search">
+      <form action="#" method="get">
+        <fieldset>
+          <label for="cnpj_search">Acessar conta com</label>
+          <i class="bi bi-caret-down-fill"></i>
+          <input type="search" name="cnpj_search" id="cnpj_search" placeholder="CNPJ" maxlength="200" />
+          <button type="submit" title="Buscar CNPJ">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="menu_container">
+      <button type="button" class="button">Abra sua conta</button>
+
+      <div class="menu_buttons">
+        <button class="menu_button" type="button" id="search_button" title="Pesquisar">
+          <i class="bi bi-search"></i>
+        </button>
+        <button onclick="openAndCloseMenu(event)" class="menu_button" type="button" id="menu_button" title="Abrir menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <div id="menu_nav_overlay" class="menu_nav_overlay"></div>
+      <nav id="menu_nav_container" class="menu_nav_container">
+        <button onclick="openAndCloseMenu(event)" type="button" id="close_menu_nav" class="close_menu_nav"><i
+            class="bi bi-x"></i></button>
+        <ul class="menu_nav">
+          <li class="nav_option_container">
+            <button onclick="selectNavOption(event)" class="nav_option nav_active">
+              <h1 id="title" class="">Acesso Rápido</h1>
+              <i class="bi bi-dash"></i>
+            </button>
+            <nav class="submenu_nav">
+              <ul class="nav_suboption">
+                <li><a href="">Localizar Agência</a></li>
+              </ul>
+              <ul class="nav_suboption">
+                <li><a href="">Fale Conosco</a></li>
+              </ul>
+              <ul class="nav_suboption">
+                <li><a href="">Política de Privacidade</a></li>
+              </ul>
+              <ul class="nav_suboption">
+                <li><a href="">2 via de boleto</a></li>
+              </ul>
+              <ul class="nav_suboption">
+                <li><a href="">Atendimento</a></li>
+              </ul>
+              <ul class="nav_suboption">
+                <li><a href="">Trabalhe Conosco</a></li>
+              </ul>
+            </nav>
+          </li>
+
+          <li class="nav_option_container">
+            <button onclick="selectNavOption(event)" class="nav_option">
+              <h1>Para Você</h1>
+              <i class="bi bi-plus"></i>
+            </button>
+            <nav class="submenu_nav">
+              <ul class="nav_suboption">
+                <li><a href="">OPÇÃO 1</a></li>
+              </ul>
+            </nav>
+          </li>
+          <li class="nav_option_container">
+            <button onclick="selectNavOption(event)" class="nav_option">
+              <h1>Para sua Empresa</h1>
+              <i class="bi bi-plus"></i>
+            </button>
+            <nav class="submenu_nav">
+              <ul class="nav_suboption">
+                <li><a href="">OPÇÃO 2</a></li>
+              </ul>
+            </nav>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main>
+
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+
+<script src="{% static 'homepage/js/index.js' %}"></script>
+
+</html>

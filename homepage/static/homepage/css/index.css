@@ -1,0 +1,147 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main .search_container {
+  display: none;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20%;
+
+  margin: 5rem 3rem;
+}
+
+.presentation .button {
+  display: none;
+}
+
+.presentation_title {
+  color: rgb(119, 119, 119);
+
+  font-weight: 300;
+  font-size: 3rem;
+
+  margin-bottom: 2rem;
+}
+
+.presentation_title span {
+  color: var(--lightprimary);
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.presentation_description {
+  color: rgb(147, 147, 147);
+  line-height: 1.5rem;
+}
+
+.sidenav {
+  margin-top: 2rem;
+  margin-right: -3vw;
+  text-align: right;
+}
+
+.sidenav a {
+  color: gray;
+  line-height: 2rem;
+  text-decoration: none;
+}
+
+.sidenav ul {
+  list-style-type: none;
+}
+
+.sidenav_title {
+  color: var(--lightprimary);
+  font-weight: 400;
+}
+
+.new_option {
+  position: relative;
+}
+
+.new_option::before {
+  content: "Novo";
+  position: absolute;
+
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: #fde9a2;
+  border-radius: 2rem;
+
+  padding: 0.2rem 0.8rem;
+
+  font-size: 0.8rem;
+}
+
+.sidenav > footer {
+  width: fit-content;
+  position: absolute;
+  text-align: right;
+
+  bottom: 1rem;
+  right: 5rem;
+  color: rgb(169, 169, 169);
+}
+
+.sidenav > footer > h2 {
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1000px) {
+  .sidenav {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    margin-top: 5rem;
+    margin-right: 0;
+  }
+
+  .sidenav ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .sidenav footer {
+    position: relative;
+    margin-top: 5rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .new_option::before {
+    right: 6.5rem;
+  }
+
+  .main .search_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+  }
+
+  .presentation .button {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+}
