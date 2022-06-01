@@ -8,10 +8,10 @@ Para esse projeto é necessário ter instalado o Python, caso não tenha baixe a
 
 ```bash
 # Clone este repositório 
-$ git clone https://github.com/Luiwzr/Sicredi_Desafio.git
+$ git clone https://github.com/Luiwzr/Desafio_Sicredi.git
 
 # Acesse a pasta do projeto no terminal
-$ cd Sicredi_Desafio
+$ cd Desafio_Sicredi
 
 # Ative o venv
 $ venv\Scripts\activate 
